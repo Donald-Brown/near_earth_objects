@@ -19,7 +19,7 @@ $(document).ready(function(){
         });
       }
     }
-    // console.log(myData);
+    console.log(myData);
 
     // create and attaach the canvas
     let mySVG = d3.select("#out1")
@@ -56,7 +56,15 @@ $(document).ready(function(){
         return 200;
       })
       .on("mouseover", function(d){
-        d3.select(this).style("fill", "#000088");
+        // d3.select(this).style("fill", "#000088");
+        d3.select(this).style("fill", function(d){
+          if(d.Magnitude > 22 && d.moid_au < 0.05){
+            return "#ff0000"
+          }else{
+            return "#000088";
+          }
+        })
+
         popup.style("opacity", .8);
         popup.html("Designation: " + d.Designation +
           "<br>Magnitude: " + d.Magnitude + 
