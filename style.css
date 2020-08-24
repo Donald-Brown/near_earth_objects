@@ -1,0 +1,27 @@
+body {
+  background-image: url("./images/starfield.jpg");
+  background-size: 100% 100vh;
+}
+
+h1 {  
+  font: 28px arial, sans-serif;
+  color: #fff;
+}
+
+#out1 {
+  position: absolute;
+  border: 0px;
+}
+
+div.popup {
+  position: absolute;
+  text-align: right;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  font: 12px arial, sans-serif;
+  background: #bb88bb;
+  border: 2px solid black;
+  border-radius: 20px;
+  pointer-events: none;
+}
